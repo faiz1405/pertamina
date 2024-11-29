@@ -7,6 +7,10 @@ import Swiper from '../../components/ui/Swiper.vue'
         <h1>Pelita air Page</h1>
 
         <Swiper :slides="['Slide Pelita 1 ', 'Slide Pelita 2', 'Slide Pelita 3']" />
+
+        <UiButton to="/">
+            Back to Home
+        </UiButton>
     </div>
 </template>
 

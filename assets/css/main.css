@@ -1,0 +1,19 @@
+body {
+  background: radial-gradient(50% 50% at 50% 50%, #3c6fba 0%, #1b3254 0%);
+  position: relative;
+  height: 80vh;
+}
+
+body::before {
+  content: "";
+  display: block;
+  border-radius: 551.479px;
+  background: #63a7e7;
+  filter: blur(275.7396545410156px);
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  width: 551.479px;
+  height: 551.479px;
+}

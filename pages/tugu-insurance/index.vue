@@ -7,6 +7,10 @@ import Swiper from '../../components/ui/Swiper.vue'
         <h1>Tugu Page</h1>
 
         <Swiper :slides="['Slide tugu-insurance 1 ', 'Slide tugu-insurance 2', 'Slide tugu-insurance 3']" />
+
+        <UiButton to="/">
+            Back to Home
+        </UiButton>
     </div>
 </template>
 

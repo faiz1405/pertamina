@@ -1,12 +1,13 @@
 <template>
     <div>
-        <nav class="container mx-auto w-full p-5">
+        <nav class=" w-full">
             <ul class="flex justify-between">
                 <li>
-                    <NuxtLink to="/">Icon</NuxtLink>
+                    <NuxtImg src="/img/bumn-1.png" format="webp" class="w-100" alt="logo bumn" title="logo bumn" />
                 </li>
                 <li>
-                    <NuxtLink to="/about">Navbar</NuxtLink>
+                    <NuxtImg src="/img/pertamina-1.png" format="webp" class="w-100" alt="logo pertamina"
+                        title="logo pertamina" />
                 </li>
 
             </ul>

@@ -8,6 +8,10 @@ import Swiper from '../../components/ui/Swiper.vue'
         <h1>Sh Gas Page</h1>
 
         <Swiper :slides="['Slide sh-gas 1 ', 'Slide sh-gas 2', 'Slide sh-gas 3']" />
+
+        <UiButton to="/">
+            Back to Home
+        </UiButton>
     </div>
 </template>
 
