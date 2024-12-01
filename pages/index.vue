@@ -3,55 +3,78 @@
 </script>
 
 <template>
-    <div class="container mx-auto flex justify-center flex-wrap gap-2">
-        <!-- <div class="wrapper-btn-1">
-            <span> </span>
-            <span> </span>
-            <span> </span>
-            <span> </span> -->
-        <!-- <NuxtLink to="/bina-medika-dhc" class="btn-custom">
-            Bina Medika Dhc
-        </NuxtLink> -->
-        <!-- </div> -->
-        <UiButton to="/bina-medika-dhc">
-            Bina Medika Dhc
-        </UiButton>
-        <UiButton to="/patrajasa">
-            Patrajasa
-        </UiButton>
-        <UiButton to="/pedeve">
-            Pedeve
-        </UiButton>
-        <UiButton to="/pelita-air">
-            Pelita Air
-        </UiButton>
-        <UiButton to="/ptc">
-            PTC
-        </UiButton>
-        <UiButton to="/sh-cnt">
-            SH c&t
-        </UiButton>
-        <UiButton to="/sh-gas">
-            SH gas
-        </UiButton>
-        <UiButton to="/sh-gas">
-            SH gas
-        </UiButton>
-        <UiButton to="/sh-iml">
-            SH iml
-        </UiButton>
-        <UiButton to="/sh-pnre">
-            SH pnre
-        </UiButton>
-        <UiButton to="/sh-r&p">
-            SH r&p
-        </UiButton>
-        <UiButton to="/sh-upstream">
-            sh upstream
-        </UiButton>
-        <UiButton to="/tugu-insurance">
-            tugu insurance
-        </UiButton>
+    <div
+        class="container absolute flex flex-wrap justify-center h-auto gap-2 mx-auto transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-100">
+        <div class="grid grid-cols-3 gap-8">
+            <!-- Button -->
+            <div class="flex items-center justify-center col-span-3">
+                <UiButton to="/sh-gas" type="blue">
+                    SH GAS
+                </UiButton>
+            </div>
+            <div class="flex items-center justify-center">
+                <UiButton to="/sh-upstream" type="blue">
+                    SH UPSTREAM
+                </UiButton>
+            </div>
+            <div class="flex items-center justify-center">
+                <UiButton to="/sh-iml" type="blue">
+                    SH IML
+                </UiButton>
+            </div>
+            <div class="flex items-center justify-center">
+                <UiButton to="/pedeve" type="gold">
+                    PEDEVE
+                </UiButton>
+            </div>
+            <div class="flex items-center justify-center">
+                <UiButton to="/sh-pnre" type="blue">
+                    SH PNRE
+                </UiButton>
+            </div>
+            <div class="flex items-center justify-center row-span-2">
+                <UiButton to="#" type="gray">
+                    HOLDING
+                </UiButton>
+            </div>
+            <div class="flex items-center justify-center">
+                <UiButton to="/ptc" type="gold">
+                    PTC
+                </UiButton>
+            </div>
+            <div class="flex items-center justify-center">
+                <UiButton to="/sh-cnt" type="blue">
+                    SH C&T
+                </UiButton>
+            </div>
+            <div class="flex items-center justify-center">
+                <UiButton to="/pelita-air" type="gold">
+                    PELITA AIR
+                </UiButton>
+            </div>
+            <div class="flex items-center justify-center">
+                <UiButton to="/sh-r&p" type="blue">
+                    SH R&P
+                </UiButton>
+            </div>
+            <div class="flex items-center justify-center">
+                <UiButton to="/patrajasa" type="gold">
+                    PATRAJASA
+                </UiButton>
+            </div>
+            <div class="flex items-center justify-center">
+                <UiButton to="/tugu-insurance" type="gold">
+                    TUGU INSURANCE
+                </UiButton>
+            </div>
+            <div class="flex items-center justify-center col-span-3">
+                <UiButton to="/bina-medika-ihc" type="gold">
+                    BINA MEDIKA IHC
+                </UiButton>
+            </div>
+        </div>
+
+
     </div>
 </template>
 

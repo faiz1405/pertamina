@@ -1,5 +1,6 @@
 <template>
-    <NuxtLink :to="link" class="btn-custom">
+    <NuxtLink :to="link" class="w-[250px] text-center px-6 py-3 transition-all bg-transparent border-2 rounded-lg"
+        :class="typeButton(type)">
         <slot />
     </NuxtLink>
 </template>
@@ -13,8 +14,22 @@ defineProps({
     link: {
         type: String,
         required: true
+    },
+    type: {
+        type: String,
+        required: false
     }
 })
+
+function typeButton(type) {
+    if (type === 'blue') {
+        return 'border-cyan-400 text-cyan-400 hover:bg-cyan-500 hover:text-white'
+    } else if (type === 'gold') {
+        return 'text-yellow-400 border-yellow-400 rounded-lg hover:bg-yellow-500 hover:text-white'
+    } else if (type === 'gray') {
+        return 'text-gray-400 border-gray-400 rounded-lg hover:bg-gray-500 hover:text-white h-[100px] flex justify-center items-center'
+    }
+}
 </script>
 
 <style scoped>
