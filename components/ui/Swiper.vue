@@ -66,7 +66,7 @@ export default {
         <swiper :modules="modules" :slides-per-view="1" :space-between="50" navigation :pagination="{ clickable: true }"
             :scrollbar="{ draggable: true }" @swiper="onSwiper" @slideChange="onSlideChange">
             <swiper-slide v-for="(slide, index) in slides" :key="index">
-                <NuxtImg :src="slide" format="webp" class="w-100" quality="100" @load="handleImageLoad(index)"
+                <NuxtImg :src="slide" format="webp" class="w-full" quality="100" @load="handleImageLoad(index)"
                     @error="handleImageError" />
             </swiper-slide>
         </swiper>
