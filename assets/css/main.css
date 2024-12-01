@@ -1,7 +1,7 @@
 body {
   background: radial-gradient(50% 50% at 50% 50%, #3c6fba 0%, #1b3254 0%);
   position: relative;
-  height: 80vh;
+  height: 100vh;
 }
 
 body::before {

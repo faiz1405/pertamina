@@ -2,7 +2,6 @@
 </script>
 
 <template>
-    <NuxtLoadingIndicator />
     <AppLayoutHeader />
     <slot />
 
