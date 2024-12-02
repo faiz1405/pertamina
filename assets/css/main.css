@@ -4,7 +4,7 @@ body {
   height: 100vh;
 }
 
-body::before {
+/* body::before {
   content: "";
   display: block;
   border-radius: 551.479px;
@@ -16,4 +16,4 @@ body::before {
   transform: translate(-50%, -50%);
   width: 551.479px;
   height: 551.479px;
-}
+} */

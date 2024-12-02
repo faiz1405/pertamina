@@ -1,12 +1,11 @@
 <script>
-import { Navigation, Pagination, A11y } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import NextSlide from '/img/tumb-slide-2-1.png'
+import { EffectCoverflow, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 export default {
     components: {
@@ -17,14 +16,12 @@ export default {
         slides: Array,
     },
     setup(props, { emit }) {
-        const imageLoadingStates = ref(props.slides.map(() => true)); // Tracks loading state for each image
+        const imageLoadingStates = ref(props.slides.map(() => true));
 
         const handleImageLoad = (index) => {
             imageLoadingStates.value[index] = false;
-
-            // Check if all images are loaded
             if (!imageLoadingStates.value.includes(true)) {
-                emit('loading-complete'); // Notify parent that loading is complete
+                emit("loading-complete");
             }
         };
 
@@ -32,11 +29,11 @@ export default {
 
         const onSwiper = (swiper) => {
             swiperInstance = swiper;
-            console.log('Swiper instance:', swiperInstance);
+            console.log("Swiper instance:", swiperInstance);
         };
 
         const onSlideChange = () => {
-            console.log('Slide changed');
+            console.log("Slide changed");
         };
 
         const slidePrev = () => {
@@ -48,66 +45,45 @@ export default {
         };
 
 
-
-
         return {
+            modules: [EffectCoverflow, Navigation],
             onSwiper,
             onSlideChange,
-            slidePrev,
-            slideNext,
-            imageLoadingStates,
             handleImageLoad,
-            NextSlide
+            slidePrev,
+            slideNext
         };
     },
 };
 </script>
 
+
+
 <template>
-    <div class="relative">
-        <swiper :modules="modules" :slides-per-view="1" :space-between="50" :pagination="{ clickable: true }"
-            :scrollbar="{ draggable: true }" @swiper="onSwiper" @slideChange="onSlideChange">
-            <swiper-slide v-for="(slide, index) in slides" :key="index">
-                <NuxtImg :src="slide" format="webp" class="w-full" quality="100" @load="handleImageLoad(index)"
+    <div class="flex items-center h-screen">
+        <swiper :modules="modules" :slides-per-view="1" :centered-slides="true" :space-between="10"
+            :effect="'coverflow'" :coverflow-effect="{
+                rotate: 10,
+                stretch: 50,
+                depth: 200,
+                modifier: 1,
+                slideShadows: false
+            }" :pagination="{ clickable: true }" navigation @swiper="onSwiper" @slideChange="onSlideChange">
+            <swiper-slide v-for="(slide, index) in slides" :key="index" class="custom-slide">
+                <NuxtImg :src="slide" format="webp" class="slide-image" quality="100" @load="handleImageLoad(index)"
                     @error="handleImageError" />
             </swiper-slide>
         </swiper>
 
-        <button @click="slideNext"
-            class="absolute top-[15%] left-[85%]  translate-x-[-50%] translate-y-[-50%] z-10 width ">
-            <div class="relative tumb">
-                <div class="wrapper-tumb">
-                    <NuxtImg :src="NextSlide" format="webp" class="w-full" alt="logo pertamina" />
-                    <div class="pulse">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                    </div>
-                    <div
-                        class="absolute top-1/2 left-1/2  translate-x-[-50%] translate-y-[-50%] w-[250px] text-tumb text-left">
-                        <p class="text-white">Upcoming Pages</p>
-                        <h2 class="font-semibold text-white">Bahan Bakar Minyak (BBM) Satu Harga (Slide 2)</h2>
-                    </div>
-                </div>
-            </div>
-
-
-
-        </button>
-
-        <NuxtLink to="/"
-            class="absolute top-[98%] left-[15%] translate-x-[-50%] translate-y-[-50%] z-10 text-[#026FC2] py-2 px-4 text-xl flex items-center rounded-full bg-white">
-            <svg xmlns="http://www.w3.org/2000/svg" class="text-[#026FC2;]" width="32" height="32" viewBox="0 0 32 32"
-                fill="#026FC2">
-                <path d="M6.6666 16L25.3333 16M6.6666 16L14.6666 8M6.6666 16L14.6666 24" stroke="#026FC2"
-                    stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            Back to Home
-        </NuxtLink>
+        <!-- Add navigation buttons -->
+        <div @click="slidePrev" class="custom-prev-button"></div>
+        <div @click="slideNext" class="custom-next-button"></div>
     </div>
 </template>
+
+
+
+
 
 
 
@@ -203,6 +179,149 @@ export default {
     transition: all 0.3s ease-in-out; /* Enables transition for width and opacity */
     
 }
+
+
+
+/* General styling for all slides */
+.custom-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, filter 0.3s ease, height 0.3s ease, width 0.3s ease; /* Smooth transition */
+}
+
+/* Styling for inactive slides (prev/next) */
+.swiper-slide:not(.swiper-slide-active) {
+  opacity: 0.6;              /* Dim the non-active slides */
+  transform: translateX(-50px) scale(0.85);  /* Slightly smaller scale */
+  z-index: 9;                /* Ensure they stack behind the active slide */
+}
+
+/* Styling for previous slide */
+.swiper-slide-prev {
+    transform: translateX(35%) !important;
+    opacity: 0.8 !important;
+}
+
+/* Styling for next slide */
+.swiper-slide-next {
+    transform: translateX(-35%) !important;
+    opacity: 0.8 !important;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    content: "" !important;
+}
+
+/* Styling for the active slide */
+.swiper-slide-active {
+  transform: scale(1); /* Full size */
+  z-index: 10;         /* Bring to front */
+  opacity: 1;          /* Fully visible */
+}
+
+
+/* Back to Home Link */
+.back-home-link {
+  position: absolute;
+  top: 98%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-decoration: none;
+  color: #026fc2;
+  padding: 8px 16px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  border-radius: 24px;
+  background-color: #ffffff;
+}
+
+/* General styling for all slides */
+.custom-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, filter 0.3s ease, height 0.3s ease; /* Smooth transition for height and other properties */
+}
+
+/* Styling for inactive slides */
+.swiper-slide:not(.swiper-slide-active) .slide-image {
+  height: 65vh; /* Default size for non-active slides */
+  filter: blur(4px); /* Add a blur effect */
+  opacity: 0.7; /* Dim the non-active images */
+  transform: scale(0.9); /* Slightly reduce the size */
+}
+
+/* Styling for the active slide */
+.swiper-slide-active .slide-image {
+  height: 70vh; /* Increase the height for active slides */
+  filter: none; /* Remove blur for the active image */
+  opacity: 1; /* Fully visible */
+  transform: scale(1); /* Full size */
+  border-radius:20px;
+}
+
+
+/* Hide default Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  display: none; /* Hides default arrows */
+}
+
+/* Custom Previous Button */
+.custom-prev-button {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  height: 80vh;
+    width: 90px;
+  z-index: 10;
+  user-select: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-prev-button:hover {
+  transform: scale(1.05);
+}
+
+/* Custom Next Button */
+.custom-next-button {
+    position: absolute;
+    right: 20px;
+    top: 10%;
+    transform: translateY(-50%);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 10;
+    height: 80vh;
+    width: 90px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-next-button:hover {
+  
+  transform: scale(1.05);
+}
+
+
+
+
+
 
 @keyframes pulsed {
     0% {
