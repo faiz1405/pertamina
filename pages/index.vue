@@ -5,7 +5,7 @@
 <template>
     <div
         class="container absolute flex flex-wrap justify-center h-auto gap-2 mx-auto transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-100">
-        <div class="grid grid-cols-3 gap-8">
+        <div class="grid grid-cols-3 gap-[80px]">
             <!-- Button -->
             <div class="flex items-center justify-center col-span-3">
                 <UiButton to="/sh-gas" type="blue">
@@ -156,6 +156,13 @@
 	animation-delay: 1s;
 }
 
+.wrapper-btn-1{
+    padding: 15px;
+    border-radius: 10.295px;
+    position: relative;
+    overflow: hidden;
+}
+
 @keyframes animate4 {
 	0% {
 		transform: translateY(100%);
@@ -165,11 +172,5 @@
 	}
 }
 
-.wrapper-btn-1{
-    padding: 15px;
-    border-radius: 10.295px;
-    position: relative;
-    overflow: hidden;
 
-}
 </style>

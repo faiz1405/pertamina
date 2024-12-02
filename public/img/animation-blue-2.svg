@@ -1,0 +1,47 @@
+<svg width="169" height="169" viewBox="0 0 169 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.2" filter="url(#filter0_f_336_4235)">
+<path d="M79.945 28.8629L81.3891 69.9254L125.18 20L83.6017 71.7813L149.249 61.6756L84.1033 74.6248L140.89 109.067L82.6591 77.1254L90.5175 105.269L79.945 78.1129L55.8759 140L77.2309 77.1254L19 109.067L75.7868 74.6248L46.0249 69.9254L76.2883 71.7813L34.71 20L78.5009 69.9254L79.945 28.8629Z" fill="#96F2FF"/>
+</g>
+<g opacity="0.6" filter="url(#filter1_f_336_4235)">
+<circle cx="84.7658" cy="84.5872" r="32.5243" fill="url(#paint0_radial_336_4235)"/>
+</g>
+<circle cx="95.8841" cy="126.526" r="1.46637" fill="white"/>
+<circle cx="116.57" cy="121.858" r="1.46637" fill="white"/>
+<circle opacity="0.4" cx="85.9129" cy="105.41" r="1.46637" fill="white"/>
+<circle cx="95.2515" cy="80.3136" r="1.46637" fill="white"/>
+<circle cx="78.5811" cy="78.1357" r="0.586549" fill="white"/>
+<circle cx="66.85" cy="64.0579" r="0.586549" fill="white"/>
+<circle opacity="0.7" cx="95.5908" cy="58.1925" r="0.586549" fill="white"/>
+<circle cx="73.3021" cy="98.6645" r="0.586549" fill="white"/>
+<circle cx="77.408" cy="117.434" r="0.586549" fill="white"/>
+<circle cx="81.5137" cy="136.203" r="0.586549" fill="white"/>
+<circle opacity="0.7" cx="106.735" cy="110.395" r="0.586549" fill="white"/>
+<circle cx="54.5325" cy="106.876" r="0.586549" fill="white"/>
+<circle opacity="0.4" cx="55.7056" cy="57.0196" r="0.586549" fill="white"/>
+<circle opacity="0.4" cx="108.495" cy="69.3373" r="0.586549" fill="white"/>
+<circle cx="43.3881" cy="38.2498" r="0.586549" fill="white"/>
+<circle opacity="0.4" cx="37.5226" cy="103.356" r="0.586549" fill="white"/>
+<circle opacity="0.7" cx="68.6097" cy="126.819" r="0.586549" fill="white"/>
+<circle cx="131.957" cy="84.5869" r="0.586549" fill="white"/>
+<circle opacity="0.7" cx="66.5567" cy="91.3323" r="1.46637" fill="white"/>
+<circle cx="107.615" cy="47.3414" r="1.46637" fill="white"/>
+<circle opacity="0.4" cx="66.5567" cy="33.8505" r="1.46637" fill="white"/>
+<circle cx="119.346" cy="81.9479" r="1.46637" fill="white"/>
+<circle cx="44.2679" cy="83.7075" r="1.46637" fill="white"/>
+<defs>
+<filter id="filter0_f_336_4235" x="10.8861" y="11.8861" width="146.477" height="136.228" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="4.05694" result="effect1_foregroundBlur_336_4235"/>
+</filter>
+<filter id="filter1_f_336_4235" x="0.858696" y="0.680054" width="167.814" height="167.814" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="25.6914" result="effect1_foregroundBlur_336_4235"/>
+</filter>
+<radialGradient id="paint0_radial_336_4235" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(84.7658 84.5872) rotate(90) scale(32.5243)">
+<stop offset="0.685" stop-color="#3FD1FF"/>
+<stop offset="1" stop-color="#266799"/>
+</radialGradient>
+</defs>
+</svg>

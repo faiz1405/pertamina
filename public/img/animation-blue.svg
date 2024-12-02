@@ -1,0 +1,53 @@
+<svg width="169" height="169" viewBox="0 0 169 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 2167">
+<g id="Star 1" opacity="0.2" filter="url(#filter0_f_313_3075)">
+<path d="M79.6887 28.8629L81.1328 69.9254L124.924 20L83.3454 71.7813L148.993 61.6756L83.8469 74.6248L140.634 109.067L82.4028 77.1254L90.2612 105.269L79.6887 78.1129L55.6196 140L76.9746 77.1254L18.7437 109.067L75.5304 74.6248L45.7685 69.9254L76.032 71.7813L34.4536 20L78.2445 69.9254L79.6887 28.8629Z" fill="#96F2FF"/>
+</g>
+<g id="BACKGROUND">
+<g id="GLOW" opacity="0.6" filter="url(#filter1_f_313_3075)">
+<circle cx="84.5096" cy="84.5872" r="32.5243" fill="url(#paint0_radial_313_3075)"/>
+</g>
+<g id="PARTICALS">
+<circle id="Ellipse 6" cx="95.6277" cy="126.526" r="1.46637" fill="white"/>
+<circle id="Ellipse 7" cx="116.314" cy="121.858" r="1.46637" fill="white"/>
+<circle id="Ellipse 8" opacity="0.4" cx="85.6566" cy="105.41" r="1.46637" fill="white"/>
+<circle id="Ellipse 9" cx="94.9952" cy="80.3136" r="1.46637" fill="white"/>
+<circle id="Ellipse 10" cx="78.3247" cy="78.1357" r="0.586549" fill="white"/>
+<circle id="Ellipse 16" cx="66.5936" cy="64.0579" r="0.586549" fill="white"/>
+<circle id="Ellipse 17" opacity="0.7" cx="95.3345" cy="58.1925" r="0.586549" fill="white"/>
+<circle id="Ellipse 18" cx="73.0458" cy="98.6645" r="0.586549" fill="white"/>
+<circle id="Ellipse 19" cx="77.1516" cy="117.434" r="0.586549" fill="white"/>
+<circle id="Ellipse 20" cx="81.2573" cy="136.203" r="0.586549" fill="white"/>
+<circle id="Ellipse 21" opacity="0.7" cx="106.479" cy="110.395" r="0.586549" fill="white"/>
+<circle id="Ellipse 23" cx="54.2762" cy="106.876" r="0.586549" fill="white"/>
+<circle id="Ellipse 24" opacity="0.4" cx="55.4493" cy="57.0196" r="0.586549" fill="white"/>
+<circle id="Ellipse 25" opacity="0.4" cx="108.239" cy="69.3373" r="0.586549" fill="white"/>
+<circle id="Ellipse 26" cx="43.1317" cy="38.2498" r="0.586549" fill="white"/>
+<circle id="Ellipse 27" opacity="0.4" cx="37.2662" cy="103.356" r="0.586549" fill="white"/>
+<circle id="Ellipse 28" opacity="0.7" cx="68.3534" cy="126.819" r="0.586549" fill="white"/>
+<circle id="Ellipse 22" cx="131.701" cy="84.5869" r="0.586549" fill="white"/>
+<circle id="Ellipse 11" opacity="0.7" cx="66.3004" cy="91.3323" r="1.46637" fill="white"/>
+<circle id="Ellipse 12" cx="107.359" cy="47.3414" r="1.46637" fill="white"/>
+<circle id="Ellipse 13" opacity="0.4" cx="66.3004" cy="33.8505" r="1.46637" fill="white"/>
+<circle id="Ellipse 14" cx="119.09" cy="81.9479" r="1.46637" fill="white"/>
+<circle id="Ellipse 15" cx="44.0115" cy="83.7075" r="1.46637" fill="white"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_313_3075" x="10.6298" y="11.8861" width="146.477" height="136.228" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="4.05694" result="effect1_foregroundBlur_313_3075"/>
+</filter>
+<filter id="filter1_f_313_3075" x="0.60247" y="0.680056" width="167.814" height="167.814" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="25.6914" result="effect1_foregroundBlur_313_3075"/>
+</filter>
+<radialGradient id="paint0_radial_313_3075" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(84.5096 84.5872) rotate(90) scale(32.5243)">
+<stop offset="0.685" stop-color="#3FD1FF"/>
+<stop offset="1" stop-color="#266799"/>
+</radialGradient>
+</defs>
+</svg>
