@@ -19,11 +19,10 @@ const handleLoadingComplete = () => {
         </div>
 
 
-        <Swiper :slides="[ImageSlide1, ImageSlide2]" @loading-complete="handleLoadingComplete" />
+        <Swiper :slides="[ImageSlide1, ImageSlide2, ImageSlide1, ImageSlide2]"
+            @loading-complete="handleLoadingComplete" />
 
-        <UiButton to="/">
-            Back to Home
-        </UiButton>
+
     </div>
 </template>
 
